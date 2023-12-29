@@ -1,8 +1,7 @@
-import { NextApiRequest } from "next";
 import { NextResponse } from "next/server";
 import { ResultType, youtube } from "scrape-youtube";
 
-export async function GET(req: NextApiRequest) {
+export async function GET(req: Request) {
   if (req.url) {
     const url = new URL(req?.url);
 

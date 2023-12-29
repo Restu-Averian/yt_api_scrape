@@ -1,9 +1,8 @@
 import { createWriteStream, readFileSync } from "fs";
-import { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse } from "next/server";
 import ytdl from "ytdl-core";
 
-export async function GET(req: NextApiRequest) {
+export async function GET(req: Request) {
   if (req?.url) {
     const url = new URL(req?.url);
     const searchParam = new URLSearchParams(url.searchParams);
