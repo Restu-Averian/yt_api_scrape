@@ -1,7 +1,7 @@
+"use client";
+import { useMemo } from "react";
+
 export default function Page() {
-  return (
-    <a href="http://localhost:3000/api/download?id=gBKWl2CdCyA" download>
-      download
-    </a>
-  );
+  const originUrl = window ? window.location.origin : null;
+  return <a href={`${originUrl}/api`}>Api Link</a>;
 }
