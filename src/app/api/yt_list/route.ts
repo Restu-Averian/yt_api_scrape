@@ -6,7 +6,7 @@ export async function GET(req: Request) {
     const url = new URL(req?.url);
 
     const videoParam: string | null =
-      url?.searchParams?.get("search_query") || "windah";
+      url?.searchParams?.get("search_query") || "trending";
 
     const typeSearch: ResultType | string | null =
       url?.searchParams?.get("type") || "any";
